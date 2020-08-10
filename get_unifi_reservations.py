@@ -14,14 +14,14 @@ fixed_only = os.environ.get('FIXED_ONLY', False)
 
 def get_configured_clients(session):
     # Get configured clients
-    r = session.get(f'{baseurl}/api/s/{site}/list/user', verify=False)
+    r = session.get(f'{baseurl}/proxy/network/api/s/{site}/list/user', verify=False)
     r.raise_for_status()
     return r.json()['data']
 
 
 def get_active_clients(session):
     # Get active clients
-    r = session.get(f'{baseurl}/api/s/{site}/stat/sta', verify=False)
+    r = session.get(f'{baseurl}/proxy/network/api/s/{site}/stat/sta', verify=False)
     r.raise_for_status()
     return r.json()['data']
 
