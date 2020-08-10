@@ -29,7 +29,7 @@ def get_active_clients(session):
 def get_clients():
     s = requests.Session()
     # Log in to controller
-    r = s.post(f'{baseurl}/api/login', json={'username': username, 'password': password}, verify=False)
+    r = s.post(f'{baseurl}/api/auth/login', json={'username': username, 'password': password}, verify=False)
     r.raise_for_status()
     
     clients = {}
