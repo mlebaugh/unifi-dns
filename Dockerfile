@@ -21,4 +21,4 @@ COPY *.py ./
 COPY run.sh ./
 #run!
 #ENTRYPOINT ["webproc","--config","/etc/dnsmasq.conf","--","dnsmasq","--no-daemon"]
-ENTRYPOINT ["run.sh"]
+ENTRYPOINT ["./run.sh"]
