@@ -3,7 +3,7 @@ hosts_dir=/etc/dnsmasq.hosts
 unifi_hosts=$hosts_dir/unifi.hosts
 
 #[ -d $hosts_dir ] || mkdir $hosts_dir
-webproc --config etc/dnsmasq.conf -- dnsmasq --no-daemon
+webproc --config /etc/dnsmasq.conf -- dnsmasq --no-daemon
 
 while true; do
     ./get_unifi_reservations.py > /tmp/current_unifi.hosts
