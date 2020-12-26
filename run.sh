@@ -1,9 +1,8 @@
 #!/bin/sh
 hosts_dir=/etc/dnsmasq.hosts
-mkdir=$hosts_dir
 unifi_hosts=$hosts_dir/unifi.hosts
 
-#[ -d $hosts_dir ] || mkdir $hosts_dir
+[ -d $hosts_dir ] || mkdir $hosts_dir
 webproc --config /etc/dnsmasq.conf -- dnsmasq --no-daemon
 
 while true; do
