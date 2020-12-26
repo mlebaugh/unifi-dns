@@ -1,5 +1,6 @@
 #!/bin/sh
 hosts_dir=/etc/dnsmasq.hosts
+mkdir=$hosts_dir
 unifi_hosts=$hosts_dir/unifi.hosts
 
 #[ -d $hosts_dir ] || mkdir $hosts_dir
